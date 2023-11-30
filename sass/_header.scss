@@ -1,0 +1,155 @@
+.background-wrapper {
+  background-color: $Very-light-red;
+  position: relative;
+  & > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+header {
+  padding-top: 2rem;
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+nav {
+  display: none;
+  width: 80%;
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 7px;
+  background-color: $White;
+  text-align: center;
+  padding: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @include desktop {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    transform: none;
+    position: relative;
+    top: auto;
+    left: auto;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+nav a {
+  font-size: $link-font-size !important;
+}
+nav .links,
+nav .btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid $Grayish-blue;
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+nav .links {
+  @include desktop {
+    flex: 1;
+    border: none;
+  }
+}
+nav .links li {
+}
+nav .links li > a,
+nav .btns .btn:first-of-type {
+  color: $Very-dark-black-blue;
+  @include desktop {
+    color: $White;
+  }
+}
+
+nav .btns {
+  margin-top: 20px;
+  border: none;
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+// Dropdown ---------
+nav .links li .dropdown {
+  display: none;
+  flex-direction: column;
+  background-color: $Grayish-blue;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 7px;
+  transition: 0.1s;
+  @include desktop {
+    text-align: left;
+    width: 200px;
+    display: flex;
+    visibility: hidden;
+    z-index: -1;
+    position: absolute;
+    opacity: 1;
+    background-color: $White;
+  }
+}
+nav .links li .dropdown a {
+  @include desktop {
+    color: $Very-dark-grayish-blue;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: $Very-dark-black-blue;
+    }
+  }
+}
+.arrow {
+  margin: auto;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  @include desktop {
+    display: none;
+  }
+}
+.arrow-desktop {
+  display: none;
+  margin: auto;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  @include desktop {
+    display: inline;
+  }
+}
+nav .links li:hover {
+  & .dropdown {
+    display: flex;
+    z-index: 1;
+    visibility: visible;
+  }
+  .arrow,
+  .arrow-desktop {
+    transform: rotate(180deg);
+  }
+  @include desktop {
+    & > a {
+      text-decoration: underline;
+    }
+  }
+}
+nav .links li .dropdown:hover,
+nav .links li:hover .dropdown:hover {
+  z-index: 1;
+  visibility: visible;
+}
+
+@import "./hamburger_menu";
