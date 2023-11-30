@@ -1,0 +1,37 @@
+.background-wrapper > * {
+  position: relative;
+  color: $White;
+  //   max-width: 80%;
+}
+.background-wrapper {
+  padding-bottom: 6rem;
+  border-bottom-left-radius: 25%;
+}
+.background-wrapper > h1 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  @include desktop {
+    font-size: 3.5rem;
+  }
+}
+.background-wrapper > p.describtion {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+}
+.background-wrapper > .btns {
+  margin-top: 3rem;
+  text-align: center;
+}
+.background-wrapper > .btns .btn-colored {
+  margin-right: 1rem;
+}
+.background-wrapper > h1,
+.background-wrapper > p.describtion,
+.background-wrapper > .btns {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
