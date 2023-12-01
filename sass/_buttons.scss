@@ -1,0 +1,41 @@
+.btn {
+  padding: 10px 30px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.btn-colored {
+  color: $Light-red;
+  background-color: $White;
+  &:hover {
+    background-color: rgba($White, 0.3);
+    color: $White;
+  }
+}
+nav .btn-colored {
+  background-color: $Very-light-red;
+  color: $White;
+  &:hover {
+    color: $Light-red;
+    background-color: transparent;
+  }
+  @include desktop {
+    color: $Light-red;
+    background-color: $White;
+    &:hover {
+      background-color: rgba($White, 0.3);
+      color: $White;
+    }
+  }
+}
+.btn-bordered {
+  border: 1px solid $White;
+  background-color: transparent;
+  color: $White;
+  &:hover {
+    color: $Light-red;
+    background-color: $White;
+  }
+}
