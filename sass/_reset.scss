@@ -13,3 +13,16 @@ li {
 a {
   text-decoration: none;
 }
+
+.only-mobile {
+  @include desktop {
+    display: none;
+  }
+}
+
+.only-desktop {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}

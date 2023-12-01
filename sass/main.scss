@@ -1,41 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,600;1,300&family=Ubuntu:wght@400;500;700&display=swap");
-@import "./variables";
 
+@import "./variables";
 @import "./reset";
 @import "./_container";
 @import "./header";
 @import "./hero";
-
-.btn {
-  padding: 10px 30px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-}
-
-.btn-colored {
-  color: $Light-red;
-  background-color: $White;
-  &:hover {
-    background-color: rgba($White, 0.3);
-    color: $White;
-  }
-}
-nav .btn-colored {
-  background-color: $Very-light-red;
-  color: $White;
-  &:hover {
-    color: $Light-red;
-    background-color: transparent;
-  }
-}
-.btn-bordered {
-  border: 1px solid $White;
-  background-color: transparent;
-  color: $White;
-  &:hover {
-    color: $Light-red;
-    background-color: $White;
-  }
-}
+@import "./buttons";
+@import "./sections";
+@import "./footer";
