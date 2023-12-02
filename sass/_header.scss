@@ -1,10 +1,13 @@
 .background-wrapper {
-  background-color: $Very-light-red;
+  background-color: $Light-red;
   position: relative;
+  overflow: hidden;
   & > img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 2409px;
+    opacity: 0.6;
+    right: -49rem;
+    top: -67rem;
   }
 }
 
