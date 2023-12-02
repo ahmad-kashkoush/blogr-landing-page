@@ -75,21 +75,23 @@
 
 .section .container-right .col-2 img {
   @include mediaScreen(903px) {
-    right: -120px;
+    right: -171px;
   }
 
   @include mediaScreen(1073px) {
     width: 400px;
   }
 
-  @include mediaScreen(1400px) {
-    right: -270px;
-    top: -13rem;
-  }
+  // @include mediaScreen(1400px) {
+  //   right: -270px;
+  //   top: -13rem;
+  // }
 }
 .section .container-left .col-2 img {
+  width: 550px;
   @include mediaScreen(903px) {
-    left: -120px;
+    width: 450px;
+    left: -185px;
   }
 
   @include mediaScreen(1073px) {

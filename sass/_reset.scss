@@ -15,14 +15,14 @@ a {
 }
 
 .only-mobile {
-  @include desktop {
+  @include mediaScreen(903px) {
     display: none;
   }
 }
 
 .only-desktop {
   display: none;
-  @include desktop {
+  @include mediaScreen(903px) {
     display: block;
   }
 }
